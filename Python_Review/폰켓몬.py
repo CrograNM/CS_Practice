@@ -38,5 +38,8 @@ def solution(nums):
         answer = int(len(new))
     return answer
 
+def solution2(nums):
+    return min(len(nums)/2, len(set(nums)))
+
 nums = [3,1,2,3]
-print(solution(nums))
+print(solution2(nums))
