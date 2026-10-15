@@ -39,6 +39,28 @@ def solution2(participant, completion):
     
     return key
 
+def solution3(participant, completion):
+    # 카운터 쓰지 않고 Dict으로만 구현해보기
+    p = dict()
+    answer = ''
+
+    # print(p)
+    for part in participant:
+        if part not in p:
+            p[part] = 1
+        else:
+            p[part] += 1
+    # print(p)
+    for comp in completion:
+        if comp in p:
+            p[comp] -= 1
+    # print(p)
+    for key, val in p.items():
+        if val > 0:
+            answer = key
+
+    return answer
+
 participant = ["mislav", "stanko", "mislav", "ana"]
 completion = ["stanko", "ana", "mislav"]
-print(solution2(participant, completion))
+print(solution3(participant, completion))
