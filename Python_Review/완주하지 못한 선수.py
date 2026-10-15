@@ -27,6 +27,18 @@ def solution(participant, completion):
             answer = key
     return answer
 
+def solution2(participant, completion):
+    answer = Counter(participant) - Counter(completion)
+
+    # print(answer)
+    #
+    # print(list(answer.keys())[0])
+
+    key, value = answer.popitem()
+    # print(key, value)
+    
+    return key
+
 participant = ["mislav", "stanko", "mislav", "ana"]
 completion = ["stanko", "ana", "mislav"]
-print(solution(participant, completion))
+print(solution2(participant, completion))
