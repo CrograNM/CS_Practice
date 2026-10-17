@@ -28,8 +28,11 @@ def solution(clothes):
     # clothes = [의상 이름, 종류]의 배열
     # 종류를 키로, 종류에 해당하는 의상 이름의 집합을 밸류로 하는 dict?
     """
-    headgear: yellow hat, green turban
-    eyewear: blue sunglasses
+    headgear: yellow hat, green turban      2개
+    eyewear: blue sunglasses                1개
+                                            --> 종류 1개 : 3
+                                                종류 2개 : 2*1
+                                                총 조합 : 5
 
     모든 경우의 수
         yellow hat
@@ -42,9 +45,22 @@ def solution(clothes):
 
     dict_clothes = {종류1: (의상1, 의상2 ,...), 종류2: ...}
     총 조합 = dict_clothes 순회
-    """
 
-    comb = itertools.combinations(clothes, 2)
+    종류 1개만 판단 - 총 의상 개수
+    종류 2개만 판단 - 종류1개수*종류2개수, ..., 이런식으로 곱하기 횟수 2번
+    --> 종류별 개수만 있으면 되나?
+
+    dict_clothes = {종류1: 개수, 종류2: 개수, ...}
+    """
+    dict_clothes = dict()
+    for cloth, cloth_type in clothes:
+        if cloth_type not in dict_clothes:
+            dict_clothes[cloth_type] = 1
+        else:
+            dict_clothes[cloth_type] += 1
+
+    print(len(dict_clothes))
+
     answer = 0
     return answer
 
