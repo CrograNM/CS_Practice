@@ -75,9 +75,9 @@ CS_Practice/
 - [x] 대충 만든 자판 (Lv.1): 딕셔너리, `min`, 순회
 
 **딕셔너리, 집합, Counter**
-- [ ] 폰켓몬 (Lv.1): `set`
-- [ ] 완주하지 못한 선수 (Lv.1): `Counter` 또는 딕셔너리
-- [ ] 의상 (Lv.2): `defaultdict`, 경우의 수
+- [x] 폰켓몬 (Lv.1): `set`
+- [x] 완주하지 못한 선수 (Lv.1): `Counter` 또는 딕셔너리
+- [x] 의상 (Lv.2): `defaultdict`, 경우의 수
 
 **collections, heapq, itertools**
 - [ ] 같은 숫자는 싫어 (Lv.1): 스택
