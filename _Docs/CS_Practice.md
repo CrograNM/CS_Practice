@@ -80,7 +80,7 @@ CS_Practice/
 - [x] 의상 (Lv.2): `defaultdict`, 경우의 수
 
 **collections, heapq, itertools**
-- [ ] 같은 숫자는 싫어 (Lv.1): 스택
+- [x] 같은 숫자는 싫어 (Lv.1): 스택
 - [ ] 기능개발 (Lv.2): `deque`
 - [ ] 더 맵게 (Lv.2): `heapq`
 - [ ] 두 개 뽑아서 더하기 (Lv.1): `combinations`, `set`
